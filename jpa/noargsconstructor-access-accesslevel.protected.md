@@ -6,7 +6,8 @@
 
 
 
-```
+{% code overflow="wrap" %}
+```java
 @Entity
 @Table(name = "orders")
 @Getter
@@ -69,10 +70,11 @@ public class Order {
   ...
 }
 ```
+{% endcode %}
 
 JPA 에서 다대일 연관관계를 맺을때 N + 1 문제를 피하기 위해 `@ManyToOne(fetch = FetchType.LAZY)` 로 지연로딩을 하게되는데 `FetchType.EAGER` 와 달리 실제로 find 한 Order 객체에서 member 를 탐색하는 시점에 member 를 쿼리하게 된다.
 
-```
+```java
 Order findOrder = em.find(Order.class, id);  // 1
 findOrder.getMember().getName();   // 2
 ```
@@ -105,7 +107,7 @@ findOrder.getMember().getName();   // 2
 
 이 경우는 기능상의 문제가 아니라 휴먼 에러를 방지하기 위함이다.
 
-```
+```java
 @Transactional
 public Long order(Long memberId, Long itemId, int count) {
   // 엔티티 조회
@@ -131,7 +133,7 @@ public Long order(Long memberId, Long itemId, int count) {
 
 위와 같은 비즈니스 로직에서 주문상품과 주문 엔티티를 만들때 정적 팩토리 메소드를 이용해 객체를 만들어내고 있다.
 
-```
+```java
 // Order Entity
 public static Order createOrder(Member member, Delivery delivery, OrderItem... orderItems) {
   Order order = new Order();
