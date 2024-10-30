@@ -1,6 +1,5 @@
 ---
 icon: hand-wave
-description: _TIL 정리 페이지_
 coverY: 0
 ---
 
