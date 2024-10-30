@@ -1,9 +1,9 @@
 ---
+icon: box-open
 description: tdd 에 대해
-icon: cube
 ---
 
-# TDD
+# TDD 개요
 
 **테스트 주도 개발 (TDD)란?**
 

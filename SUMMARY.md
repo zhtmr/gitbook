@@ -2,6 +2,6 @@
 
 * [gitbook](README.md)
 
-## Group 1
+## TDD
 
-* [TDD](group-1/tdd.md)
+* [TDD 개요](tdd/tdd.md)
