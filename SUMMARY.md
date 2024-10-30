@@ -1,6 +1,6 @@
 # Table of contents
 
-* [gitbook](README.md)
+* [Index](README.md)
 
 ## TDD
 
